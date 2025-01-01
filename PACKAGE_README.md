@@ -4,7 +4,7 @@
 
 # FoundryVTT Module - {{MODULE_NAME}}
 
-This module integrates Foundry VTT with WLED to control real-world LEDs.
+{{MODULE_DESCRIPTION}}
 
 ## Installation
 In Foundry VTT's Insall Module interface, paste the following URL into the "Manifest URL" field at the bottom and click "Install"

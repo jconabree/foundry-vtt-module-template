@@ -1,7 +1,7 @@
 {
   "id": "{{PACKAGE_NAME}}",
   "title": "{{MODULE_NAME}}",
-  "description": "Foundry VTT Module",
+  "description": "{{MODULE_DESCRIPTION}}",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",

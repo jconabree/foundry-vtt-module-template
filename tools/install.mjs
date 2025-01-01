@@ -128,6 +128,15 @@ const run = async () => {
             })
         },
         {
+            key: 'MODULE_DESCRIPTION',
+            question: 'Module description',
+            answer: await inputPrompt({
+                message: 'Short module description?',
+                required: true,
+                default: 'Foundry VTT Module'
+            })
+        },
+        {
             key: 'PACKAGE_NAME',
             question: 'Package Name (eg "my-module")',
             answer: await inputPrompt({
