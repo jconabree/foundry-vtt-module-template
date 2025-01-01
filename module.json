@@ -1,40 +1,45 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "{{PACKAGE_NAME}}",
+  "title": "{{MODULE_NAME}}",
+  "description": "Foundry VTT Module",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
-    "minimum": 10,
-    "verified": 10,
-    "maximum": 11
+    "minimum": 12,
+    "verified": 12,
+    "maximum": 12
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "{{AUTHOR_NAME}}",
+      "url": "https://github.com/{{GITHUB_NAME}}"
     }
   ],
   "relationships": {
-    "systems": [],
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/refs/tags/release-4.1.1/system.json",
+        "compatibility": {
+          "verified": "4.1.1"
+        }
+      }
+    ],
     "requires": []
   },
   "esmodules": [
-    "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
+    "dist/module.js"
   ],
   "styles": [
-    "styles/module.css"
+    "dist/module.css"
   ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "languages/en.json"
+      "path": "dist/languages/en.json"
     }
   ],
   "url": "#{URL}#",
@@ -45,7 +50,7 @@
   "media": [
     {
       "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
+      "url": "https://raw.githubusercontent.com/{{GITHUB_FULLNAME}}/refs/heads/main/icons/logo.png"
     }
   ]
 }
