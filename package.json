@@ -24,15 +24,21 @@
     "build:styles": "cp -r src/styles dist/",
     "build:languages": "cp -r src/languages dist/",
     "clean": "rimraf ./dist/*",
+    "watch:all": "concurrently \"npm run watch:scripts\" \"npm run watch:styles\" \"npm run watch:languages\"",
+    "watch:scripts": "tsc --watch",
+    "watch:styles": "nodemon -L --watch src/styles -e css --exec 'npx rimraf ./dist/styles/* && npm run build:styles'",
+    "watch:languages": "nodemon -L --watch src/languages -e css --exec 'npx rimraf ./dist/languages/* && npm run build:languages'",
     "template:setup": "node tools/install.mjs",
     "template:clean": "node tools/clean.mjs && rimraf ./tools"
   },
   "devDependencies": {
     "@inquirer/prompts": "^7.2.1",
     "chalk": "^5.4.1",
+    "concurrently": "^9.1.2",
     "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
     "git-url-parse": "^16.0.0",
     "globby": "^14.0.2",
+    "nodemon": "^3.1.9",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.2"
   },

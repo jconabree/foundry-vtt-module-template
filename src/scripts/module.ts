@@ -1,10 +1,7 @@
-import settings from './settings';
-import logger from './logger';
+import settings from './settings.js';
+import logger from './logger.js';
 
-if (process.env.DEBUG) {
-    CONFIG.debug.hooks = true;
-    logger.warn('Setting debug hooks to true');
-}
+// CONFIG.debug.hooks = true;
 
 Hooks.once('init', async function() {
     settings.init();
