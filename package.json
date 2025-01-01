@@ -25,7 +25,7 @@
     "build:languages": "cp src/languages dist/",
     "clean": "rimraf ./dist/*",
     "template:setup": "node tools/install.mjs",
-    "template:clean": "node tools/clean.mjs"
+    "template:clean": "node tools/clean.mjs && rimraf ./tools"
   },
   "devDependencies": {
     "@inquirer/prompts": "^7.2.1",

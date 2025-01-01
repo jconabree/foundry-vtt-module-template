@@ -21,7 +21,7 @@ const removeTemplateNpmScripts = async () => {
         })
     );
 
-    const adjustedContents = JSON.stringify(packageJson, null, '\t');
+    const adjustedContents = JSON.stringify(packageJson, null, 2);
 
     await fsPromise.writeFile(packageJsonPath, adjustedContents, { encoding: 'utf8' });
 

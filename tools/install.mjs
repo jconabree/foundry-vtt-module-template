@@ -29,6 +29,7 @@ const replaceValuesInFiles = async (replacements) => {
     const paths = await globby([
         'module.json',
         'package.json',
+        'package-lock.json',
         'PACKAGE_README.md',
         'src/**/*.{ts,js,json}'
     ]);
